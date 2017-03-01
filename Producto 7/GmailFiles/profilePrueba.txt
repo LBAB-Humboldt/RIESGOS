@@ -1,0 +1,206 @@
+{
+   "_id": "profile:effaf81a-29c1-102b-9a4a-00304854f820",
+   "_rev": "1-49cdcc98dff1785f64a3d9fd02844601",
+   "taxonomicNotes": {
+       "notes": "Especie natural de Colombia con caracteristicas particulares.\r\n",
+       "references": [
+           "Investigador cientifico del Instituto Humboldt.  Paginas 1-100"
+       ]
+   },
+   "population": {
+       "extremeFluctuation": {
+           "extremeFluctuation": "yes"
+       },
+       "resume": "No hay datos de población para la especie"
+   },
+   "distribution": {
+       "fragmented": "yes",
+       "altitude": {
+           "type": "circa",
+           "absolute": 700
+       },
+       "brasilianEndemic": "yes",
+       "resume": "Especie endémica de Colombia con datos especificos",
+       "references": [
+           "Investigador 1 de la Humboldt - Libro Rojo pagina 1-2",
+           "Investigador 2 de la Humboldt - Libro Rojo pagina 3-22",
+           "Investigador 3 de la Humboldt - Libro Rojo pagina 23 - 100"       ]
+   },
+   "ecology": {
+       "lifeForm": [
+           "arbol pequeño"
+       ],
+       "substratum": [
+           "terrestre"
+       ],
+       "habitats": [
+           "1.6 Flora tropical y subtropical"
+       ],
+       "biomas": [
+           "Mata del Atlantico"
+       ],
+       "fitofisionomies": [
+           "Floresta Ombrófila Aberta Submontana"
+       ],
+       "vegetation": [
+           "Floresta Ombrófila (Floresta Pluvial)"
+       ],
+       "resume": "arbusto de tierra con características de planta subtropical (Maas et al., 2015; Lobão, 2014). ",
+       "references": [
+           "Juan Rojas - Acceso en: 02 Mar. 2015",
+           "Maria Castas de la Palava, p. pp. 65-98, 2001."
+       ]
+   },
+   "reproduction": {
+       "sexualSystem": "monoecious",
+       "fenology": [
+           {
+               "fenology": "flora",
+               "start": "Sep",
+               "end": "Dec"
+           }
+       ],
+       "pollinationSyndrome": [
+           "cantarophily"
+       ],
+       "dispersionSyndrome": [
+           "zoochory"
+       ],
+       "resume": "Especie monocotiledonea de verificación cientifica",
+       "references": [
+           "Habermas Jurgen, Cristan.  Paginas 1-22"
+       ]
+   },
+   "threats": [
+       {
+           "threat": "9.5 Air-borne pollutants",
+           "stress": "1.2 Ecosystem degradation",
+           "incidence": "local",
+           "severity": "high",
+           "reversible": false,
+           "ended": false,
+           "timing": [
+               "past",
+               "present",
+               "future"
+           ],
+           "decline": [
+               "habitat",
+               "locality"
+           ],
+           "details": "Vertiente norte de la vegetación que se ha ejecutado en los ultimos años",
+           "references": [
+               "Marcos, C.S., Matos, D.M.S., 2003. Estructura de Poblaciones endémicas de Colombia"
+           ]
+       },
+       {
+           "threat": "1.1 Housing & urban areas",
+           "stress": "1.2 Ecosystem degradation",
+           "incidence": "local",
+           "severity": "high",
+           "reversible": false,
+           "ended": false,
+           "timing": [
+               "past",
+               "present",
+               "future"
+           ],
+           "decline": [
+               "locality",
+               "habitat"
+           ],
+           "details": "Detalles en el proceso de implementación de poblaciones silvestres entre enero y abril",
+           "references": [
+               "Fernandez de la Pava, Robeiro.  Revista cientifica Geociências - UFRJ 22, 45–59."
+           ]
+       }
+   ],
+   "actions": [
+       {
+           "action": "5.4.2 National level",
+           "situation": "on going",
+           "details": "Categorizada como Deficiente de datos (DD) en el Libro Rojo de Flora Humboldt, 2014). ",
+           "references": [
+               "Martinez de la Pava, Jaime.  Referencias cientificas colombianas, 2015"
+           ]
+       },
+       {
+           "action": "5.4.1 International level",
+           "situation": "on going",
+           "details": "Categorizada como 'En Peligro' (EN), Segun Centro de Monitoreo 1998 (IUCN, 2011). ",
+           "references": [
+               "Centro de Monitoreo de Especies Colombia, Instituto Humboldt 2008"
+           ]
+       },
+       {
+           "action": "1.1 Site/area protection",
+           "situation": "on going",
+           "details": "Una especie en el parque nacional del Chikamocha (Lobo, 2012).",
+           "references": [
+               "Catalogo de Especies Humboldt, Libre Verde 2012"
+           ]
+       }
+   ],
+   "metadata": {
+       "status": "done",
+       "contributor": "Jaime Alberto Gutierrez",
+       "contact": "jaimealbertogutierrez@gmail.com",
+       "creator": "Jaime Alberto Gutierrez",
+       "created": 1479335273,
+       "modified": 1479329397,
+       "description": "Aburria aburri - (Lesson - 1828)",
+       "title": "Aburria aburri - (Lesson - 1828)",
+       "source": "User",
+       "type": "profile",
+       "valid": true,
+       "identifier": "profile:effaf81a-29c1-102b-9a4a-00304854f820"
+   },
+   "taxon": {
+       "family": "Cracidae",
+       "scientificName": "Aburria aburri - (Lesson - 1828)",
+       "scientificNameWithoutAuthorship": "Aburria aburri",
+       "scientificNameAuthorship": "(Lesson - 1828)"
+   },
+   "validations": [
+       {
+           "metadata": {
+               "creator": "Jaime Alberto Gutierrez Mejia",
+               "contact": "correo@servidor.com",
+               "created": 1428964833,
+               "status": "done"
+           },
+           "field": "taxonomicNotes",
+           "comment": "Sin comentarios iniciales"
+       },
+       {
+           "metadata": {
+               "creator": "Jaime Alberto Gutierrez Mejia",
+               "contact": "correo@servidor.com",
+               "created": 1428964959,
+               "status": "open"
+           },
+           "field": "distribution",
+           "comment": "Distribucion taxonomica de especies en Colombia. 2015"
+       },
+       {
+           "metadata": {
+               "creator": "Jaime Alberto Gutierrez Mejia",
+               "contact": "correo@servidor.com",
+               "created": 1428965025,
+               "status": "open"
+           },
+           "field": "ecology",
+           "comment": "Referencias pendientes de validacion por el instituto"
+       },
+       {
+           "metadata": {
+               "creator": "Carolina Castellanos",
+               "contact": "ccastellanos@humboldt.org.co",
+               "created": 1428965280,
+               "status": "open"
+           },
+           "field": "distribution",
+           "comment": "La especie debe salir de Colombia para estudio e investigación"
+       }
+   ]
+}

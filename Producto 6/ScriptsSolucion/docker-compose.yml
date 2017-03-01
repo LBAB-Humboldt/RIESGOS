@@ -1,0 +1,155 @@
+version: "2"
+services:
+  proxy:
+      image: diogok/caddy
+      restart: "always"
+      ports:
+        - 80:80
+        - 443:443
+      networks:
+        - nuvem
+      volumes:
+        - ./Caddyfile:/etc/Caddyfile
+        - ./index.html:/var/www/html/index.html
+        - /opt/caddy:/root/.caddy
+  couchdb:
+      image: cncflora/couchdb
+      networks:
+        - nuvem
+      restart: "always"
+      ports:
+          - "5984:5984"
+      volumes:
+          - "/var/data/couchdb:/var/lib/couchdb:rw"
+  elasticsearch:
+      image: cncflora/elasticsearch
+      networks:
+        - nuvem
+      restart: "always"
+      ports:
+          - "9200:9200"
+      volumes:
+          - "/var/data/elasticsearch/data:/usr/share/elasticsearch/data:rw"
+  kibana:
+      image: cncflora/kibana
+      networks:
+        - nuvem
+      restart: "always"
+  floradata:
+      image: cncflora/floradata
+      networks:
+        - nuvem
+      restart: "always"
+      ports:
+          - 80
+          - 9001
+  aka:
+      image: cncflora/aka
+      networks:
+        - nuvem
+      restart: "always"
+      volumes:
+          - "/var/data/aka:/var/data/aka:rw"
+      environment:
+          PROXY: "/aka"
+  services:
+      image: cncflora/services
+      networks:
+        - nuvem
+      restart: "always"
+      environment:
+          DB: "public"
+          BASE: "/services"
+  #portal:
+  #    image: cncflora/portal
+  #    networks:
+  #      - nuvem
+  #    restart: "always"
+  #    environment:
+  #        BASE: "/portal"
+  entrypoint: 
+      image: cncflora/entrypoint
+      networks:
+        - nuvem
+      restart: "always"
+  connect:
+      image: cncflora/connect
+      networks:
+        - nuvem
+      restart: "always"
+      volumes:
+          - "/var/data/connect:/var/floraconnect:rw"
+      environment:
+          PROXY: "/connect"
+  dwc_services:
+      image: cncflora/dwc-services
+      networks:
+        - nuvem
+      restart: "always"
+      environment:
+          PROXY: "/dwc_services"
+  checklist:
+      image: cncflora/checklist
+      networks:
+        - nuvem
+      restart: "always"
+      environment:
+          BASE: "/checklist"
+          HOST: "${HOST}"
+  occurrences:
+      image: cncflora/occurrences
+      networks:
+        - nuvem
+      restart: "always"
+      environment:
+          BASE: "/occurrences"
+          HOST: "${HOST}"
+  profiles:
+      image: cncflora/profiles
+      networks:
+        - nuvem
+      restart: "always"
+      environment:
+          BASE: "/profiles"
+          HOST: "${HOST}"
+  assessments:
+      image: cncflora/assessments
+      networks:
+        - nuvem
+      restart: "always"
+      environment:
+          BASE: "/assessment"
+          HOST: "${HOST}"
+  migrator:
+      image: cncflora/migrator
+      networks:
+        - nuvem
+      restart: "always"
+      environment:
+          HOST: "${HOST}"
+  reports2:
+      image: cncflora/reports2
+      networks:
+        - nuvem
+      restart: "always"
+  arquivos:
+      image: cncflora/apache
+      networks:
+        - nuvem
+      restart: "always"
+      volumes:
+          - "/var/data/www:/var/www:rw"
+  arquivos-sftp:
+      image: asavartzeth/sftp
+      networks:
+        - nuvem
+      restart: "always"
+      ports:
+          - "2223:22"
+      environment:
+          SFTP_USER: "cncflora"
+          SFTP_PASS: "1cncflora2"
+      volumes:
+          - "/var/data/www:$SFTP_DATA_DIR/chroot/www:rw"
+networks:
+  nuvem:
